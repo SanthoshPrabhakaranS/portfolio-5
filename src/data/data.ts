@@ -19,7 +19,7 @@ export const PROFILE = {
   name: "Santhosh Prabhakaran",
   initials: "SP",
   photo: "/profile.jpg" as string | null,
-  bio: "Full Stack Developer building IoT dashboards, PWAs and web apps that feel fast.",
+  bio: "Currently making smart buildings smarter at Nectar IT.",
   intro:
     "I design and ship web products end to end, from dashboards and reporting engines to mobile-first PWAs and web3 frontends. Currently building IoT applications at Nectar IT.",
   email: "santhoshprabhakaran02@gmail.com",
