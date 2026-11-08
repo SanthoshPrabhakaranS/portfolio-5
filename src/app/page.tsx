@@ -6,6 +6,7 @@ import Heading from "@/components/Heading";
 import CountUp from "@/components/CountUp";
 import Marquee from "@/components/Marquee";
 import Effects from "@/components/Effects";
+import ToolLogo from "@/components/ToolLogo";
 import { EXPERIENCE, PROFILE, PROJECTS, SKILLS, STATS, TOOLS } from "@/data/data";
 
 // Sets the stagger index used by `.stagger` transition delays
@@ -99,7 +100,7 @@ export default function Home() {
             <div className="tools">
               {TOOLS.map((t, i) => (
                 <div className="tool stagger" style={stagger(i)} key={t.name}>
-                  <div className="ic">{t.icon}</div>
+                  <ToolLogo logo={t.logo} />
                   <div>
                     <h4>{t.name}</h4>
                     <p>{t.category}</p>

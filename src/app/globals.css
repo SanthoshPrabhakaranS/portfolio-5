@@ -154,6 +154,8 @@ section { margin-bottom: 96px; scroll-margin-top: 100px; }
 @media (max-width: 600px) { .tools { grid-template-columns: 1fr; } }
 .tool { display: flex; align-items: center; gap: 16px; padding: 14px; border-radius: 16px; transition: background .25s; }
 .tool:hover { background: var(--surface); }
+.tool .ic svg { width: 28px; height: 28px; transition: transform .3s cubic-bezier(.2,.7,.2,1); }
+.tool:hover .ic svg { transform: scale(1.15) rotate(-6deg); }
 .tool .ic {
   width: 56px; height: 56px; border-radius: 14px; background: var(--surface-2);
   display: grid; place-items: center; font-weight: 800; font-size: 15px; color: var(--accent-2);

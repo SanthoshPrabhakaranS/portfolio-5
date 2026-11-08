@@ -1,3 +1,20 @@
+import {
+  siClaude,
+  siExpress,
+  siFirebase,
+  siGraphql,
+  siMongodb,
+  siMui,
+  siNextdotjs,
+  siNodedotjs,
+  siPostgresql,
+  siPrisma,
+  siReact,
+  siSupabase,
+  siTailwindcss,
+  siTypescript,
+} from "simple-icons";
+
 export const PROFILE = {
   name: "Santhosh Prabhakaran",
   initials: "SP",
@@ -127,10 +144,18 @@ export const EXPERIENCE = [
 ];
 
 export const TOOLS = [
-  { icon: "N", name: "Next.js & React", category: "Frontend framework" },
-  { icon: "TS", name: "Node.js & TypeScript", category: "Backend & APIs" },
-  { icon: "PG", name: "PostgreSQL & Supabase", category: "Databases" },
-  { icon: "M", name: "MongoDB & Firebase", category: "NoSQL & realtime" },
-  { icon: "TW", name: "Tailwind & Material UI", category: "Styling & components" },
-  { icon: "AI", name: "Claude, Cursor & Copilot", category: "AI-assisted development" },
+  { logo: siNextdotjs, name: "Next.js", category: "React framework" },
+  { logo: siReact, name: "React", category: "UI library" },
+  { logo: siTypescript, name: "TypeScript", category: "Typed JavaScript" },
+  { logo: siTailwindcss, name: "Tailwind CSS", category: "Utility-first styling" },
+  { logo: siMui, name: "MUI", category: "Component library" },
+  { logo: siNodedotjs, name: "Node.js", category: "JavaScript runtime" },
+  { logo: siExpress, name: "Express", category: "Backend framework" },
+  { logo: siGraphql, name: "GraphQL", category: "API query language" },
+  { logo: siPrisma, name: "Prisma", category: "TypeScript ORM" },
+  { logo: siPostgresql, name: "PostgreSQL", category: "Relational database" },
+  { logo: siSupabase, name: "Supabase", category: "Postgres platform" },
+  { logo: siMongodb, name: "MongoDB", category: "Document database" },
+  { logo: siFirebase, name: "Firebase", category: "Realtime & hosting" },
+  { logo: siClaude, name: "Claude", category: "AI-assisted development" },
 ];
