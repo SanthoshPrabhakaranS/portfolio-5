@@ -1,14 +1,16 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { Briefcase, FolderGit2, History, House, Mail, PenLine, Wrench } from "lucide-react";
 
 const LINKS = [
-  { id: "home", label: "Home" },
-  { id: "work", label: "Work" },
-  { id: "projects", label: "Projects" },
-  { id: "experience", label: "Experience" },
-  { id: "writing", label: "Writing" },
-  { id: "contact", label: "Contact" },
+  { id: "home", label: "Home", icon: House },
+  { id: "work", label: "Work", icon: Briefcase },
+  { id: "projects", label: "Projects", icon: FolderGit2 },
+  { id: "experience", label: "Experience", icon: History },
+  { id: "stack", label: "Tools", icon: Wrench },
+  { id: "writing", label: "Writing", icon: PenLine },
+  { id: "contact", label: "Contact", icon: Mail },
 ];
 
 export default function Nav() {
@@ -29,9 +31,16 @@ export default function Nav() {
 
   return (
     <nav className="nav">
-      {LINKS.map((l) => (
-        <a key={l.id} href={`#${l.id}`} className={active === l.id ? "active" : undefined}>
-          {l.label}
+      {LINKS.map(({ id, label, icon: Icon }) => (
+        <a
+          key={id}
+          href={`#${id}`}
+          aria-label={label}
+          aria-current={active === id ? "true" : undefined}
+          className={active === id ? "active" : undefined}
+        >
+          <Icon size={20} strokeWidth={1.75} />
+          <span className="tip">{label}</span>
         </a>
       ))}
     </nav>
