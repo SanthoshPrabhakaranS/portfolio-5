@@ -38,51 +38,6 @@ export const SKILLS = [
   "PWA",
 ];
 
-export const WORK_HIGHLIGHTS = [
-  {
-    name: "Building Dashboard Revamp",
-    badge: "IoT",
-    gradient: "linear-gradient(135deg,#8b5cf6,#4c1d95)",
-    description: "React → Next.js rebuild with themes, widgets, alarms, scheduler and 3D views.",
-    tags: ["Next.js", "3D", "UX"],
-  },
-  {
-    name: "AI Reporting Engine",
-    badge: "XLS",
-    gradient: "linear-gradient(135deg,#10b981,#065f46)",
-    description: "Automated Excel reports with charts and OpenAI-generated insights, delivered on schedule.",
-    tags: ["Node.js", "ExcelJS", "OpenAI"],
-  },
-  {
-    name: "Occupant & Security PWAs",
-    badge: "PWA",
-    gradient: "linear-gradient(135deg,#f59e0b,#b45309)",
-    description: "QR-based service requests, visitor passes, check-in/out and verification for facilities.",
-    tags: ["PWA", "Mobile-first"],
-  },
-  {
-    name: "Shiseido Web3",
-    badge: "NFT",
-    gradient: "linear-gradient(135deg,#ec4899,#831843)",
-    description: "NFT application frontend with SSR on Next.js 13.4, with 30% faster page loads.",
-    tags: ["Next.js", "Web3", "SSR"],
-  },
-  {
-    name: "Dvin Wine Marketplace",
-    badge: "Dvin",
-    gradient: "linear-gradient(135deg,#ef4444,#7f1d1d)",
-    description: "Blockchain wine bottle sales with wallet and marketplace SDK integrations.",
-    tags: ["Next.js 14", "GraphQL", "Web3"],
-  },
-  {
-    name: "NuRupi & EPL Fintech",
-    badge: "₹",
-    gradient: "linear-gradient(135deg,#3b82f6,#1e3a8a)",
-    description: "Legacy React refactor with Context, memoization and custom hooks, with 20% faster loads.",
-    tags: ["React", "Performance"],
-  },
-];
-
 export const PROJECTS = [
   {
     name: "Airbnb Clone",

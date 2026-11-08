@@ -6,7 +6,7 @@ import Heading from "@/components/Heading";
 import CountUp from "@/components/CountUp";
 import Marquee from "@/components/Marquee";
 import Effects from "@/components/Effects";
-import { EXPERIENCE, PROFILE, PROJECTS, SKILLS, STATS, TOOLS, WORK_HIGHLIGHTS } from "@/data/data";
+import { EXPERIENCE, PROFILE, PROJECTS, SKILLS, STATS, TOOLS } from "@/data/data";
 
 // Sets the stagger index used by `.stagger` transition delays
 const stagger = (i: number) => ({ "--i": i }) as React.CSSProperties;
@@ -52,22 +52,6 @@ export default function Home() {
               </div>
             </div>
             <Marquee items={SKILLS} />
-          </Reveal>
-
-          <Reveal id="work">
-            <Heading top="Work" bottom="Highlights" />
-            <div className="list">
-              {WORK_HIGHLIGHTS.map((w, i) => (
-                <div className="item stagger" style={stagger(i)} key={w.name}>
-                  <div className="thumb" style={{ background: w.gradient }}>{w.badge}</div>
-                  <div>
-                    <h3>{w.name}</h3>
-                    <p>{w.description}</p>
-                    <Tags tags={w.tags} />
-                  </div>
-                </div>
-              ))}
-            </div>
           </Reveal>
 
           <Reveal id="projects">
