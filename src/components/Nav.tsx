@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Briefcase, FolderGit2, History, House, Mail, PenLine, Wrench } from "lucide-react";
+import { Briefcase, FolderGit2, History, House, Mail, Wrench } from "lucide-react";
 
 const LINKS = [
   { id: "home", label: "Home", icon: House },
@@ -9,7 +9,6 @@ const LINKS = [
   { id: "projects", label: "Projects", icon: FolderGit2 },
   { id: "experience", label: "Experience", icon: History },
   { id: "stack", label: "Tools", icon: Wrench },
-  { id: "writing", label: "Writing", icon: PenLine },
   { id: "contact", label: "Contact", icon: Mail },
 ];
 

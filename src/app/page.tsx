@@ -6,7 +6,7 @@ import Heading from "@/components/Heading";
 import CountUp from "@/components/CountUp";
 import Marquee from "@/components/Marquee";
 import Effects from "@/components/Effects";
-import { EXPERIENCE, POSTS, PROFILE, PROJECTS, SKILLS, STATS, TOOLS, WORK_HIGHLIGHTS } from "@/data/data";
+import { EXPERIENCE, PROFILE, PROJECTS, SKILLS, STATS, TOOLS, WORK_HIGHLIGHTS } from "@/data/data";
 
 // Sets the stagger index used by `.stagger` transition delays
 const stagger = (i: number) => ({ "--i": i }) as React.CSSProperties;
@@ -119,23 +119,6 @@ export default function Home() {
                   <div>
                     <h4>{t.name}</h4>
                     <p>{t.category}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </Reveal>
-
-          <Reveal id="writing">
-            <Heading top="Dev" bottom="Notes" />
-            <div className="list">
-              {POSTS.map((post, i) => (
-                <div className="post stagger" style={stagger(i)} key={post.title}>
-                  <h3>{post.title}</h3>
-                  <p>{post.excerpt}</p>
-                  <div className="meta">
-                    <span>Coming soon</span>
-                    <span>·</span>
-                    <span>{post.readTime}</span>
                   </div>
                 </div>
               ))}

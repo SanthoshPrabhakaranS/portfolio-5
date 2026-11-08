@@ -179,22 +179,3 @@ export const TOOLS = [
   { icon: "TW", name: "Tailwind & Material UI", category: "Styling & components" },
   { icon: "AI", name: "Claude, Cursor & Copilot", category: "AI-assisted development" },
 ];
-
-// Placeholder posts: replace with real articles or remove
-export const POSTS = [
-  {
-    title: "Migrating a Production Dashboard from React to Next.js",
-    excerpt: "What changed, what broke, and what I'd do differently.",
-    readTime: "6 min read",
-  },
-  {
-    title: "Generating Excel Reports with Charts in Node.js",
-    excerpt: "Using ExcelJS and Chart.js to build reports people actually open.",
-    readTime: "5 min read",
-  },
-  {
-    title: "Building PWAs for Facility Management",
-    excerpt: "QR codes, visitor passes and offline-friendly mobile UX.",
-    readTime: "4 min read",
-  },
-];

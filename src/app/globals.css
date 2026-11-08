@@ -161,12 +161,6 @@ section { margin-bottom: 96px; scroll-margin-top: 100px; }
 .tool h4 { font-size: 17px; font-weight: 700; }
 .tool p { color: var(--muted); font-size: 13px; }
 
-/* Writing */
-.post { display: block; padding: 18px 14px; border-radius: 16px; transition: background .25s; }
-.post:hover { background: var(--surface); }
-.post h3 { font-size: 22px; font-weight: 700; }
-.post p { color: var(--muted); font-size: 15px; margin-top: 6px; }
-.post .meta { display: flex; gap: 12px; margin-top: 10px; font-size: 13px; color: var(--muted); }
 
 /* Contact */
 form { display: grid; gap: 16px; margin-top: 40px; }
