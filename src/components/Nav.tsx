@@ -1,6 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { FolderGit2, History, House, Mail, Wrench } from "lucide-react";
 
 const LINKS = [
@@ -12,9 +14,11 @@ const LINKS = [
 ];
 
 export default function Nav() {
-  const [active, setActive] = useState("home");
+  const pathname = usePathname();
+  const [active, setActive] = useState(pathname === "/projects" ? "projects" : "home");
 
   useEffect(() => {
+    if (pathname !== "/") return;
     const spy = new IntersectionObserver(
       (entries) => {
         entries.forEach((e) => {
@@ -25,21 +29,21 @@ export default function Nav() {
     );
     document.querySelectorAll("main section").forEach((s) => spy.observe(s));
     return () => spy.disconnect();
-  }, []);
+  }, [pathname]);
 
   return (
     <nav className="nav">
       {LINKS.map(({ id, label, icon: Icon }) => (
-        <a
+        <Link
           key={id}
-          href={`#${id}`}
+          href={`/#${id}`}
           aria-label={label}
           aria-current={active === id ? "true" : undefined}
           className={active === id ? "active" : undefined}
         >
           <Icon size={20} strokeWidth={1.75} />
           <span className="tip">{label}</span>
-        </a>
+        </Link>
       ))}
     </nav>
   );

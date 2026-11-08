@@ -1,4 +1,5 @@
-import Image from "next/image";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 import Nav from "@/components/Nav";
 import Profile from "@/components/Profile";
 import Reveal from "@/components/Reveal";
@@ -7,20 +8,13 @@ import CountUp from "@/components/CountUp";
 import Marquee from "@/components/Marquee";
 import Effects from "@/components/Effects";
 import ToolLogo from "@/components/ToolLogo";
+import ProjectItem from "@/components/ProjectItem";
+import ShowMore from "@/components/ShowMore";
+import { stagger } from "@/lib/stagger";
 import { EXPERIENCE, PROFILE, PROJECTS, SKILLS, STATS, TOOLS } from "@/data/data";
 
-// Sets the stagger index used by `.stagger` transition delays
-const stagger = (i: number) => ({ "--i": i }) as React.CSSProperties;
-
-function Tags({ tags }: { tags: string[] }) {
-  return (
-    <div className="tags">
-      {tags.map((t) => (
-        <span key={t}>{t}</span>
-      ))}
-    </div>
-  );
-}
+const FEATURED_PROJECTS = 3;
+const VISIBLE_TOOLS = 6;
 
 export default function Home() {
   return (
@@ -58,23 +52,15 @@ export default function Home() {
           <Reveal id="projects">
             <Heading top="Side" bottom="Projects" />
             <div className="list">
-              {PROJECTS.map((p, i) => (
-                <div className="item stagger" style={stagger(i)} key={p.name}>
-                  <div className="thumb">
-                    <Image src={p.image} alt={p.name} fill sizes="120px" />
-                  </div>
-                  <div>
-                    <h3>{p.name}</h3>
-                    <p>{p.description}</p>
-                    <Tags tags={p.tags} />
-                    <div className="links">
-                      <a href={p.link} target="_blank" rel="noopener">Live ↗</a>
-                      <a href={p.source} target="_blank" rel="noopener">Code ↗</a>
-                    </div>
-                  </div>
-                </div>
+              {PROJECTS.slice(0, FEATURED_PROJECTS).map((p, i) => (
+                <ProjectItem project={p} index={i} key={p.name} />
               ))}
             </div>
+            {PROJECTS.length > FEATURED_PROJECTS && (
+              <Link href="/projects" className="more-btn">
+                View all {PROJECTS.length} projects <ArrowRight size={18} />
+              </Link>
+            )}
           </Reveal>
 
           <Reveal id="experience">
@@ -97,7 +83,7 @@ export default function Home() {
 
           <Reveal id="stack">
             <Heading top="Tools I" bottom="Work With" />
-            <div className="tools">
+            <ShowMore initial={VISIBLE_TOOLS} className="tools">
               {TOOLS.map((t, i) => (
                 <div className="tool stagger" style={stagger(i)} key={t.name}>
                   <ToolLogo logo={t.logo} />
@@ -107,7 +93,7 @@ export default function Home() {
                   </div>
                 </div>
               ))}
-            </div>
+            </ShowMore>
           </Reveal>
 
           <Reveal id="contact">
