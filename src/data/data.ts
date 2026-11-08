@@ -20,6 +20,25 @@ export const STATS = [
   { value: "3", label: "Companies" },
 ];
 
+export const SKILLS = [
+  "Next.js",
+  "React",
+  "TypeScript",
+  "Node.js",
+  "Express",
+  "GraphQL",
+  "PostgreSQL",
+  "Supabase",
+  "MongoDB",
+  "Prisma",
+  "Firebase",
+  "Tailwind CSS",
+  "Redux",
+  "Zustand",
+  "Chart.js",
+  "PWA",
+];
+
 export const WORK_HIGHLIGHTS = [
   {
     name: "Building Dashboard Revamp",

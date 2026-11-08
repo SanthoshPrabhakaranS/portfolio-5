@@ -2,7 +2,14 @@ import Image from "next/image";
 import Nav from "@/components/Nav";
 import Profile from "@/components/Profile";
 import Reveal from "@/components/Reveal";
-import { EXPERIENCE, POSTS, PROFILE, PROJECTS, STATS, TOOLS, WORK_HIGHLIGHTS } from "@/data/data";
+import Heading from "@/components/Heading";
+import CountUp from "@/components/CountUp";
+import Marquee from "@/components/Marquee";
+import Effects from "@/components/Effects";
+import { EXPERIENCE, POSTS, PROFILE, PROJECTS, SKILLS, STATS, TOOLS, WORK_HIGHLIGHTS } from "@/data/data";
+
+// Sets the stagger index used by `.stagger` transition delays
+const stagger = (i: number) => ({ "--i": i }) as React.CSSProperties;
 
 function Tags({ tags }: { tags: string[] }) {
   return (
@@ -17,20 +24,19 @@ function Tags({ tags }: { tags: string[] }) {
 export default function Home() {
   return (
     <>
+      <Effects />
       <Nav />
       <div className="wrap">
         <Profile />
 
         <main>
           <Reveal id="home">
-            <h1 className="big">
-              Full Stack<span className="dim">Developer</span>
-            </h1>
+            <Heading as="h1" top="Full Stack" bottom="Developer" />
             <p className="lead">{PROFILE.intro}</p>
             <div className="stats">
               {STATS.map((s) => (
                 <div className="stat" key={s.label}>
-                  <strong>{s.value}</strong>
+                  <CountUp value={s.value} />
                   <span>{s.label}</span>
                 </div>
               ))}
@@ -45,15 +51,14 @@ export default function Home() {
                 Next.js, React, Node.js, TypeScript
               </div>
             </div>
+            <Marquee items={SKILLS} />
           </Reveal>
 
           <Reveal id="work">
-            <h2 className="big">
-              Work<span className="dim">Highlights</span>
-            </h2>
+            <Heading top="Work" bottom="Highlights" />
             <div className="list">
-              {WORK_HIGHLIGHTS.map((w) => (
-                <div className="item" key={w.name}>
+              {WORK_HIGHLIGHTS.map((w, i) => (
+                <div className="item stagger" style={stagger(i)} key={w.name}>
                   <div className="thumb" style={{ background: w.gradient }}>{w.badge}</div>
                   <div>
                     <h3>{w.name}</h3>
@@ -66,12 +71,10 @@ export default function Home() {
           </Reveal>
 
           <Reveal id="projects">
-            <h2 className="big">
-              Side<span className="dim">Projects</span>
-            </h2>
+            <Heading top="Side" bottom="Projects" />
             <div className="list">
-              {PROJECTS.map((p) => (
-                <div className="item" key={p.name}>
+              {PROJECTS.map((p, i) => (
+                <div className="item stagger" style={stagger(i)} key={p.name}>
                   <div className="thumb">
                     <Image src={p.image} alt={p.name} fill sizes="120px" />
                   </div>
@@ -90,11 +93,9 @@ export default function Home() {
           </Reveal>
 
           <Reveal id="experience">
-            <h2 className="big">
-              +4 Years of<span className="dim">Experience</span>
-            </h2>
-            {EXPERIENCE.map((job) => (
-              <div className="job" key={job.company}>
+            <Heading top="+4 Years of" bottom="Experience" />
+            {EXPERIENCE.map((job, i) => (
+              <div className="job stagger" style={stagger(i)} key={job.company}>
                 <div className="job-head">
                   <h3>{job.company}</h3>
                   <span className="when">{job.duration}</span>
@@ -110,12 +111,10 @@ export default function Home() {
           </Reveal>
 
           <Reveal id="stack">
-            <h2 className="big">
-              Tools I<span className="dim">Work With</span>
-            </h2>
+            <Heading top="Tools I" bottom="Work With" />
             <div className="tools">
-              {TOOLS.map((t) => (
-                <div className="tool" key={t.name}>
+              {TOOLS.map((t, i) => (
+                <div className="tool stagger" style={stagger(i)} key={t.name}>
                   <div className="ic">{t.icon}</div>
                   <div>
                     <h4>{t.name}</h4>
@@ -127,12 +126,10 @@ export default function Home() {
           </Reveal>
 
           <Reveal id="writing">
-            <h2 className="big">
-              Dev<span className="dim">Notes</span>
-            </h2>
+            <Heading top="Dev" bottom="Notes" />
             <div className="list">
-              {POSTS.map((post) => (
-                <div className="post" key={post.title}>
+              {POSTS.map((post, i) => (
+                <div className="post stagger" style={stagger(i)} key={post.title}>
                   <h3>{post.title}</h3>
                   <p>{post.excerpt}</p>
                   <div className="meta">
@@ -146,9 +143,7 @@ export default function Home() {
           </Reveal>
 
           <Reveal id="contact">
-            <h2 className="big">
-              Let&apos;s Work<span className="dim">Together</span>
-            </h2>
+            <Heading top="Let’s Work" bottom="Together" />
             <form action={`mailto:${PROFILE.email}`} method="post" encType="text/plain">
               <div className="row">
                 <label>
