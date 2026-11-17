@@ -27,7 +27,7 @@ export const PROFILE = {
   email: "santhoshprabhakaran02@gmail.com",
   location: "Coimbatore, India",
   social: {
-    linkedin: "https://www.linkedin.com/in/-santhosh-dev/",
+    linkedin: "https://www.linkedin.com/in/santhoshhh/",
     github: "https://github.com/SanthoshPrabhakaranS",
   },
   // Set to "/resume.pdf" after adding a resume (without phone number) to /public
