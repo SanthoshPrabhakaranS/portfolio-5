@@ -18,7 +18,7 @@ import {
 export const PROFILE = {
   name: "Santhosh Prabhakaran",
   initials: "SP",
-  photo: "/profile-v3.jpg" as string | null,
+  photo: "/profile-v4.jpg" as string | null,
   bio: "Currently making smart buildings smarter at Nectar IT.",
   status: "Software Engineer @ Nectar IT · building IoT platforms",
   hook: "I build products end to end, from the first UX sketch to the cron job that runs at 2 a.m.",
