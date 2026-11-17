@@ -18,23 +18,132 @@ import {
 export const PROFILE = {
   name: "Santhosh Prabhakaran",
   initials: "SP",
-  photo: "/profile.jpg" as string | null,
+  photo: "/profile-v2.jpg" as string | null,
   bio: "Currently making smart buildings smarter at Nectar IT.",
+  status: "Software Engineer @ Nectar IT · building IoT platforms",
+  hook: "I build products end to end, from the first UX sketch to the cron job that runs at 2 a.m.",
   intro:
-    "I design and ship web products end to end, from dashboards and reporting engines to mobile-first PWAs and web3 frontends. Currently building IoT applications at Nectar IT.",
+    "I've led a dashboard rebuild from design exploration to production, built reporting engines that deliver themselves, and shipped PWAs people use on the job every day.",
   email: "santhoshprabhakaran02@gmail.com",
   location: "Coimbatore, India",
   social: {
     linkedin: "https://www.linkedin.com/in/-santhosh-dev/",
     github: "https://github.com/SanthoshPrabhakaranS",
   },
+  // Set to "/resume.pdf" after adding a resume (without phone number) to /public
+  resume: null as string | null,
 };
 
-export const STATS = [
-  { value: "+4", label: "Years of experience" },
-  { value: "+12", label: "Projects shipped" },
-  { value: "3", label: "Companies" },
+export const CAPABILITIES = [
+  {
+    claim: "design it",
+    proof: "Led the dashboard revamp from UX exploration to production: themes, widgets, 3D views.",
+  },
+  {
+    claim: "build it",
+    proof: "Next.js, Node.js, TypeScript and PostgreSQL in production for 4+ years.",
+  },
+  {
+    claim: "make it fast",
+    proof: "20% faster loads on fintech apps. 30% faster pages with server-side rendering.",
+  },
+  {
+    claim: "make it smart",
+    proof: "Built OpenAI-powered insights into reports, so they explain themselves.",
+  },
 ];
+
+// Work stories. TODO: add real numbers to `outcome` where you have them (hours saved, users, sites)
+export const SYSTEMS = [
+  {
+    title: "Reports that deliver themselves",
+    summary: "A reporting engine that builds Excel reports with charts and sends them on schedule.",
+    problem: "Teams needed regular Excel reports with charts, built and delivered without anyone doing it by hand.",
+    thinking: "A report nobody has to remember to make is a report that actually gets read.",
+    flow: ["Cron schedule", "Query the data", "Build sheets + charts", "Deliver automatically"],
+    outcome: "Dynamic Excel reports with charts, generated and delivered on schedule with zero manual steps.",
+    tags: ["Node.js", "Express", "TypeScript", "ExcelJS", "Chart.js"],
+  },
+  {
+    title: "Reports that explain themselves",
+    summary: "OpenAI-powered insights that turn static report data into readable narratives.",
+    problem: "Reports full of numbers still left people to work out what the numbers meant.",
+    thinking: "The useful part of a report is the conclusion. Give people that first.",
+    flow: ["Report data", "Add context", "OpenAI model", "Narrative insights in the report"],
+    outcome: "Static reports became actionable narratives, reducing manual analysis time.",
+    tags: ["OpenAI", "Node.js", "TypeScript"],
+  },
+  {
+    title: "Energy compliance alarms",
+    summary: "Daily checks of energy use against benchmarks, with alerts when a site drifts.",
+    problem: "Energy overuse is easy to miss when nobody is checking every site, every day.",
+    thinking: "Compliance shouldn't depend on someone remembering to look.",
+    flow: ["Daily cron", "Calculate usage", "Compare to benchmark", "Trigger alert"],
+    outcome: "Automatic daily compliance checks with alerts, instead of manual review.",
+    tags: ["Node.js", "TypeScript", "Cron jobs"],
+  },
+  {
+    title: "Facility PWA for occupants",
+    summary: "QR-based service requests and visitor passes, built mobile-first.",
+    problem: "Raising a facility request or inviting a visitor shouldn't need a desk, a form or a phone call.",
+    thinking: "Meet people where they already are: on their phone, standing next to the problem.",
+    flow: ["Scan a QR code", "Raise a service request", "Generate visitor passes"],
+    outcome: "Led scoping, planning and delivery of a mobile-first app that streamlined facility operations.",
+    tags: ["PWA", "Mobile-first", "QR codes"],
+  },
+  {
+    title: "Security desk PWA",
+    summary: "Visitor verification, check-in/check-out tracking and blocking for security staff.",
+    problem: "Security staff needed a fast, reliable way to verify and track every visitor.",
+    thinking: "At a security desk, the right answer has to be one tap away.",
+    flow: ["Verify the visitor", "Check in", "Track the visit", "Check out or block"],
+    outcome: "A dedicated tool that strengthened day-to-day security operations.",
+    tags: ["PWA", "Mobile-first"],
+  },
+  {
+    title: "Faster fintech apps",
+    summary: "Refactoring legacy React code for the NuRupi and EPL fintech apps.",
+    problem: "Legacy code was slowing the apps down and making changes risky.",
+    thinking: "Performance and maintainability usually share the same fix: clearer state.",
+    flow: ["Untangle legacy code", "Context API for state", "Memoization", "Custom hooks"],
+    outcome: "20% faster load times and a codebase that's easier to maintain.",
+    tags: ["React", "Context API", "Performance"],
+  },
+  {
+    title: "Web3 storefronts",
+    summary: "Frontends for Shiseido's NFT app, Dvin's wine marketplace and GetMojito's website.",
+    problem: "Web3 products have to feel as smooth as any normal store, wallets and all.",
+    thinking: "Users shouldn't feel the blockchain. They should feel a fast, polished store.",
+    flow: ["Server-side rendering", "GraphQL data", "Wallet + marketplace SDKs", "Polished animations"],
+    outcome: "30% faster page loads on Shiseido with Next.js SSR.",
+    tags: ["Next.js", "GraphQL", "Web3"],
+  },
+];
+
+// TODO: add the real details: why the rebuild was needed, key decisions, results
+export const CASE_STUDY = {
+  label: "Nectar IT · IoT platform · Led end to end",
+  title: "Rebuilding the dashboard people check every day",
+  blocks: [
+    {
+      heading: "The brief",
+      body: "Move the platform's dashboard from React to Next.js, and use the rebuild to rethink the experience instead of just porting it.",
+    },
+    {
+      heading: "Design first",
+      body: "The project started with UX design exploration, not code. I worked out the layouts, themes and interactions before building them.",
+    },
+    {
+      heading: "What shipped",
+      body: "New themes, interactive widgets, alarms configuration, scheduler setup and 3D views of the data.",
+    },
+    {
+      heading: "My role",
+      body: "I led the full lifecycle, from design exploration and planning through to the production rollout.",
+    },
+  ],
+  tags: ["Next.js", "React", "UX design", "3D", "Data visualization"],
+};
 
 export const SKILLS = [
   "Next.js",

@@ -3,11 +3,13 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { FolderGit2, History, House, Mail, Wrench } from "lucide-react";
+import { BookOpen, Boxes, FlaskConical, History, House, Mail, Wrench } from "lucide-react";
 
 const LINKS = [
   { id: "home", label: "Home", icon: House },
-  { id: "projects", label: "Projects", icon: FolderGit2 },
+  { id: "systems", label: "Systems", icon: Boxes },
+  { id: "case", label: "Case study", icon: BookOpen },
+  { id: "projects", label: "Playground", icon: FlaskConical },
   { id: "experience", label: "Experience", icon: History },
   { id: "stack", label: "Tools", icon: Wrench },
   { id: "contact", label: "Contact", icon: Mail },
