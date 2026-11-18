@@ -56,6 +56,22 @@ export const CAPABILITIES = [
 // Work stories. TODO: add real numbers to `outcome` where you have them (hours saved, users, sites)
 export const SYSTEMS = [
   {
+    title: "Ticket Health League",
+    summary: "A Chrome extension that turns keeping Zoho Projects tickets healthy into a team game, with reports that post themselves.",
+    problem: "Tickets went stale, deadlines slipped and time logs were patchy, and nobody saw it until it was already a problem.",
+    thinking: "People don't ignore tickets on purpose. Make the healthy habit visible, quick and a little bit competitive.",
+    flow: [
+      "Sync Zoho tasks, history and time logs",
+      "Score ticket health every day",
+      "Points, badges and squad standings in the browser",
+      "One-click EODs posted to Zoho Cliq",
+      "Daily and weekly PDF reports at 10 PM",
+    ],
+    outcome:
+      "Designed, built and shipped end to end on the Chrome Web Store for the whole team, with admin reports that sync, build and post themselves.",
+    tags: ["Chrome Extension", "Supabase", "PostgreSQL", "Edge Functions", "Zoho APIs", "jsPDF"],
+  },
+  {
     title: "Reports that deliver themselves",
     summary: "A reporting engine that builds Excel reports with charts and sends them on schedule.",
     problem: "Teams needed regular Excel reports with charts, built and delivered without anyone doing it by hand.",
@@ -162,6 +178,7 @@ export const SKILLS = [
   "Zustand",
   "Chart.js",
   "PWA",
+  "Chrome Extensions",
 ];
 
 export const PROJECTS = [
@@ -232,6 +249,7 @@ export const EXPERIENCE = [
       "Led the dashboard revamp from React to Next.js, from UX exploration to production rollout.",
       "Built a reporting engine (Node.js, TypeScript, Chart.js, ExcelJS) with cron-based delivery and AI insights.",
       "Built energy consumption compliance alarms and PWAs for occupants and security staff.",
+      "Built Ticket Health League, a Chrome extension with a Supabase backend that gamifies Zoho Projects ticket hygiene and posts daily and weekly reports to Zoho Cliq.",
     ],
   },
   {
