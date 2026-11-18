@@ -81,15 +81,6 @@ export const SYSTEMS = [
     tags: ["Node.js", "Express", "TypeScript", "ExcelJS", "Chart.js"],
   },
   {
-    title: "Reports that explain themselves",
-    summary: "OpenAI-powered insights that turn static report data into readable narratives.",
-    problem: "Reports full of numbers still left people to work out what the numbers meant.",
-    thinking: "The useful part of a report is the conclusion. Give people that first.",
-    flow: ["Report data", "Add context", "OpenAI model", "Narrative insights in the report"],
-    outcome: "Static reports became actionable narratives, reducing manual analysis time.",
-    tags: ["OpenAI", "Node.js", "TypeScript"],
-  },
-  {
     title: "Energy compliance alarms",
     summary: "Daily checks of energy use against benchmarks, with alerts when a site drifts.",
     problem: "Energy overuse is easy to miss when nobody is checking every site, every day.",
@@ -115,15 +106,6 @@ export const SYSTEMS = [
     flow: ["Verify the visitor", "Check in", "Track the visit", "Check out or block"],
     outcome: "A dedicated tool that strengthened day-to-day security operations.",
     tags: ["PWA", "Mobile-first"],
-  },
-  {
-    title: "Faster fintech apps",
-    summary: "Refactoring legacy React code for the NuRupi and EPL fintech apps.",
-    problem: "Legacy code was slowing the apps down and making changes risky.",
-    thinking: "Performance and maintainability usually share the same fix: clearer state.",
-    flow: ["Untangle legacy code", "Context API for state", "Memoization", "Custom hooks"],
-    outcome: "20% faster load times and a codebase that's easier to maintain.",
-    tags: ["React", "Context API", "Performance"],
   },
   {
     title: "Web3 storefronts",
@@ -199,14 +181,6 @@ export const PROJECTS = [
     source: "https://github.com/SanthoshPrabhakaranS/e-commerce",
   },
   {
-    name: "Real Estate Application",
-    image: "/projects/project5.png",
-    description: "Browse and book properties.",
-    tags: ["React", "Material UI", "Zustand", "Express", "Prisma"],
-    link: "https://real-estate-site-url.vercel.app/",
-    source: "https://github.com/SanthoshPrabhakaranS/real-estate-site",
-  },
-  {
     name: "Blogging Application",
     image: "/projects/project3.png",
     description: "Write and publish articles.",
@@ -221,14 +195,6 @@ export const PROJECTS = [
     tags: ["React", "Tailwind CSS", "Firebase"],
     link: "https://chat-app-ffced.web.app/",
     source: "https://github.com/SanthoshPrabhakaranS/firebase-chat-app",
-  },
-  {
-    name: "Authentication App",
-    image: "/projects/project7.png",
-    description: "NextAuth v5 with client and server actions.",
-    tags: ["Next.js 14", "TypeScript", "NextAuth v5"],
-    link: "https://next-auth-v5-26tr-p742udv9q-santhoshprabhakarans.vercel.app/",
-    source: "https://github.com/SanthoshPrabhakaranS/next-auth-v5",
   },
   {
     name: "Hangman",
